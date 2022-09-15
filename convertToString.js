@@ -41,7 +41,7 @@ function convertToString(num) {
  
 }
 
-let ans=convertToString(1244)
+let ans=convertToString(15606)
 console.log(ans)
 
 
@@ -65,10 +65,17 @@ if(lastThreeNumber!=="000") {
  if (lastThreeNumber[0] != "0") {
    ans+=" "+a[lastThreeNumber.toString()[0]]
   ans+=" hundred"
-  }
-  
-  
+ }
+
+  if (lastTwoNumber[0] == "0") {
+   ans += " " + twoDigit(lastTwoNumber[1])
+   
+ }else
  ans += " " + twoDigit(lastTwoNumber)
+ 
+  
+  
+ 
  
 }
 return ans
@@ -81,12 +88,24 @@ ans+=a[num.toString()[0]];
 ans+=' thousand'
 
 let lastThreeNumber=num.toString().substr(1,2)
-let lastTwoNumber=num.toString().substr(2,2)
+ let lastTwoNumber = num.toString().substr(2, 2)
+  
 if(lastThreeNumber!=="000") {
   ans+=" "+a[lastThreeNumber.toString()[0]]
-  ans+=" hundred"
+ ans += " hundred"
+
+ if (lastTwoNumber != '00') {
   
-  ans+=" "+twoDigit(lastTwoNumber)
+  if (lastTwoNumber[0] == "0") {
+    ans += " " + twoDigit(lastTwoNumber[1])
+    
+  }else
+  ans += " " + twoDigit(lastTwoNumber)
+ }
+   
+ 
+ 
+ 
 }
 return ans
 }
