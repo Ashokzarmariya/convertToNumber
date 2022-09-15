@@ -41,7 +41,7 @@ function convertToString(num) {
  
 }
 
-let ans=convertToString(12044)
+let ans=convertToString(1244)
 console.log(ans)
 
 
@@ -75,7 +75,7 @@ return ans
 }
 
 function fourDigit(num){
- if(num<10000)return threeDigit(num)
+ if(num<1000)return threeDigit(num)
 let ans="";
 ans+=a[num.toString()[0]];
 ans+=' thousand'
