@@ -36,12 +36,12 @@ let b={
 function convertToString(num) {
  //12345
 
- 
+ if(num==0)return "zero"
  return fiveDigit(num)
  
 }
 
-let ans=convertToString(15606)
+let ans=convertToString(00000)
 console.log(ans)
 
 
